@@ -53,7 +53,7 @@ class Biblioteca:
             usuario.historico.remove(livro)
             print(f'O livro "{livro.titulo}" foi devolvido por {usuario.nome}.')
         else:
-            print('Opa, parece que este livro não está com este usuário.')
+            print('Ops, parece que este livro não está com este usuário.')
 
     # Permitir que um usuário devolva um livro
     def devolver_livro(self, livro_id, usuario_id):
@@ -86,7 +86,7 @@ class Biblioteca:
         print("\nProcurar Livro:")
         print("1. Por ID")
         print("2. Por Autor")
-        print("3. Por Título")
+        print("3. Por Titulo")
 
         opcao = input("Escolha uma opção: ")
 
@@ -97,7 +97,7 @@ class Biblioteca:
             autor = input("Digite o nome do autor: ")
             livros_encontrados = [livro for livro in self.catalogo if livro.escritor == autor]
         elif opcao == '3':
-            titulo = input("Digite o título do livro: ")
+            titulo = input("Digite o Titulo do livro: ")
             livros_encontrados = [livro for livro in self.catalogo if livro.titulo == titulo]
         else:
             print("Opção inválida.")
@@ -106,28 +106,28 @@ class Biblioteca:
         if livros_encontrados:
             print("\nLivros encontrados:")
             for livro in livros_encontrados:
-                print(f"Título: {livro.titulo}, Autor: {livro.escritor}, ID: {livro.ID}, Status: {livro.status}")
+                print(f"Titulo: {livro.titulo}, Autor: {livro.escritor}, ID: {livro.ID}, Status: {livro.status}")
         else:
             print("Nenhum livro encontrado.")
 
-    # Verificar livros disponíveis para emprestimo
+    # Verificar livros disponiveis para emprestimo
     def verificar_livros_disponiveis(self):
         livros_disponiveis = [livro for livro in self.catalogo if livro.status == 'disponivel']
         if livros_disponiveis:
-            print("\nLivros disponíveis:")
+            print("\nLivros disponiveis:")
             for livro in livros_disponiveis:
-                print(f"Título: {livro.titulo}, Autor: {livro.escritor}, ID: {livro.ID}")
+                print(f"Titulo: {livro.titulo}, Autor: {livro.escritor}, ID: {livro.ID}")
         else:
-            print("Não há livros disponíveis no momento.")
+            print("Não ha livros disponiveis no momento.")
 
     # Exibir os usuários registrados na biblioteca
     def ver_usuarios_registrados(self):
         if self.usuarios:
-            print("\nUsuários Registrados:")
+            print("\Usuarios Registrados:")
             for usuario in self.usuarios:
                 print(f"Nome: {usuario.nome}, ID: {usuario.ID}")
         else:
-            print("Não há usuários registrados no momento.")
+            print("Não ha usuarios registrados no momento.")
 
 
 # Biblioteca
@@ -135,12 +135,12 @@ biblioteca = Biblioteca()
 
 # Menu
 while True:
-    print("\nBem-vindo à Biblioteca!")
+    print("\nBem-vindo a Biblioteca!")
     print("1. Adicionar Livro")
     print("2. Procurar Livro")
     print("3. Registrar Membro")
     print("4. Ver Usuários Registrados")
-    print("5. Verificar Livros Disponíveis")
+    print("5. Verificar Livros disponiveis")
     print("6. Emprestar Livro")
     print("7. Devolver Livro")
     print("8. Remover Livro")
@@ -150,7 +150,7 @@ while True:
 
     # Adicionar um novo livro
     if escolha == '1':
-        titulo = input("Digite o título do livro: ")
+        titulo = input("Digite o Titulo do livro: ")
         escritor = input("Digite o nome do escritor: ")
         ID = int(input("Digite o ID do livro: "))
         status = input("Digite o status do livro (disponivel ou emprestado): ")
@@ -159,7 +159,7 @@ while True:
         biblioteca.adicionar_livro(novo_livro)
 
         print("\nInformações do novo livro:")
-        print(f"Título do livro: {novo_livro.titulo}")
+        print(f"Titulo do livro: {novo_livro.titulo}")
         print(f"Autor: {novo_livro.escritor}")
         print(f"ID: {novo_livro.ID}")
         print(f"Status: {novo_livro.status}")
@@ -209,8 +209,8 @@ while True:
 
     # Sair do programa
     elif escolha == '9':
-        print("Obrigado por usar a Biblioteca. Até mais!")
+        print("Obrigado por usar a Biblioteca. Até mais! :)")
         break
 
     else:
-        print("Opção inválida. Por favor, escolha uma opção válida.")
+        print("ERRO 0001. Opa parece que encontramos um erro, tente executar o programa novamente !")
