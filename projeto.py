@@ -123,7 +123,7 @@ class Biblioteca:
     # Exibir os usuários registrados na biblioteca
     def ver_usuarios_registrados(self):
         if self.usuarios:
-            print("\Usuarios Registrados:")
+            print("\nUsuarios Registrados:")
             for usuario in self.usuarios:
                 print(f"Nome: {usuario.nome}, ID: {usuario.ID}")
         else:
