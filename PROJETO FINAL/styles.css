@@ -1,0 +1,51 @@
+body {
+  background-color: #141414;
+}
+
+.navbar-brand {
+  color: #ac060e !important;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+  color: #e22323 !important;
+}
+
+.pricing-table .card {
+  margin: 0 15px;
+}
+
+.pricing-table .card-body h5 {
+  font-size: 1.25rem;
+}
+
+.pricing-table .card-body p {
+  font-size: 1rem;
+}
+
+.lead-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lead-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.lead-form button {
+  padding: 0.75rem 1.5rem;
+}
